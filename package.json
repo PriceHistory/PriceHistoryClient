@@ -1,0 +1,26 @@
+{
+  "name": "price-history-client",
+  "version": "0.0.1",
+  "description": "Web client for price history app",
+  "main": "index.js",
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PriceHistory/PriceHistoryClient.git"
+  },
+  "keywords": [
+    "pricehistory"
+  ],
+  "author": "Viacheslav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PriceHistory/PriceHistoryClient/issues"
+  },
+  "homepage": "https://github.com/PriceHistory/PriceHistoryClient#readme"
+}
