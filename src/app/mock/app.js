@@ -4,7 +4,8 @@ var express = require('express');
 var products = require('./data/products.json');
 var app = express();
 
-app.get('/', function (req, res) {
+app.get('/price-history/:productID', function (req, res) {
+    console.log('Retrieving price history for product with id: ' + req.params.productID);
     res.send(products);
 });
 
