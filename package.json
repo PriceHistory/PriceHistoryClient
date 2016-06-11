@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/PriceHistory/PriceHistoryClient/issues"
   },
-  "homepage": "https://github.com/PriceHistory/PriceHistoryClient#readme"
+  "homepage": "https://github.com/PriceHistory/PriceHistoryClient#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
