@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="PriceHistoryClient">
 <head>
     <meta charset="UTF-8">
     <title>PriceHistory</title>
     <script src="../../bower_components/angular/angular.js"></script>
+    <script src="js/price-history-controller.js"></script>
+    <script src="js/price-history-service.js"></script>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
 </head>
-<body>
+<body ng-controller="PriceHistoryCtrl">
 <div class="row">
     <div class="col-md-12">
         <div class="logo">
@@ -20,8 +22,10 @@
     <div class="col-md-3"></div>
     <div class="col-md-6">
         <div class="input-form">
-            <input type="text" class="form-control text-field" ng-model="productID" placeholder="Enter your product ID here"/>
-            <input type="submit" value="Show history" class="btn btn-success"/>
+            <form ng-submit="getProductPriceHistory(productID)">
+                <input type="text" class="form-control text-field" ng-model="productID" placeholder="Enter your product ID here"/>
+                <input type="submit" value="Show history" class="btn btn-success"/>
+            </form>
         </div>
     </div>
     <div class="col-md-3"></div>
