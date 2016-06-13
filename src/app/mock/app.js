@@ -9,12 +9,16 @@ app.use(cors());
 
 app.get('/price-history/:productID', function (req, res) {
     console.log('Retrieving price history for product with id: ' + req.params.productID);
+    var found = false;
     products.forEach(function(item, i, arr) {
         if (req.params.productID == item.ProductID) {
             res.send(item);
-        }    
+            return (found = true);
+        }
     });
-    res.sendStatus(404);
+    if (!found) {
+        res.sendStatus(404);
+    }
 });
 
 app.listen(8001, function () {
