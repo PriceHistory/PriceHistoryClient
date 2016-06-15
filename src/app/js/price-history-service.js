@@ -5,17 +5,14 @@ var priceHistoryClient = angular.module('PriceHistoryClient');
 priceHistoryClient.service('PriceHistoryService', ['$http', function ($http) {
 
     this.getProductPriceHistory = function(productID) {
-        $http({
+        return $http({
             method: 'GET',
             url: 'http://localhost:8001/price-history/' + productID,
         }).then(function successCallback(response) {
-            console.log(response.data);
-            console.log('success request');
+            return response;
         }, function errorCallback(response) {
-            console.log(response.data);
-            console.log('failure request');
+            console.log('ERROR, man');
         });
-        console.log('getting price history');
     }
 
 }]);

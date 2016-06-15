@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
 </head>
 <body>
-<div ng-controller="PriceHistoryCtrl">
+<div ng-controller="PriceHistoryCtrl" id="mainDiv">
     <div class="row">
         <div class="col-md-12">
             <div class="logo">
@@ -26,8 +26,8 @@
         <div class="col-md-6">
             <div class="input-form">
                 <form ng-submit="getProductPriceHistory(productID)">
-                    <input type="text" class="form-control text-field" ng-model="productID" placeholder="Enter your product ID here"/>
-                    <input type="submit" value="Show history" class="btn btn-success"/>
+                    <input type="text" class="form-control text-field" ng-model="productID" placeholder="Enter your product ID here" id="productID"/>
+                    <input type="submit" value="Show history" class="btn btn-success" onclick="drawLineColors()"/>
                 </form>
             </div>
         </div>
