@@ -4,7 +4,7 @@ google.charts.load('current', {packages: ['corechart', 'line']});
 function drawLineColors() {
     var data = new google.visualization.DataTable();
     data.addColumn('date', 'X');
-    data.addColumn('number', 'Dogs');
+    data.addColumn('number', 'Price');
 
     var selectedProductID = document.getElementById('productID').value;
     var result = angular.element(document.getElementById('mainDiv')).scope().getProductPriceHistory(selectedProductID);
